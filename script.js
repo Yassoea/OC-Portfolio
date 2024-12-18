@@ -43,32 +43,52 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 /*First Section*/
 
+
+/*Second Section*/
+
+const header = document.querySelector('.header');
+
+
+const stickyOffset = header.offsetTop;
+
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > stickyOffset) {
+        header.classList.add('sticky'); 
+    } else {
+        header.classList.remove('sticky'); 
+    }
+});
+
+/*Second Section*/
+
+
 /*Third Section*/
-// Sélectionner les éléments
+
 const efrei = document.querySelector('.efrei');
 const oc = document.querySelector('.oc');
 
-// Fonction pour afficher le texte du reveal
+
 function showReveal(element) {
     const revealInfo = element.querySelector('.reveal-info');
     revealInfo.style.display = 'block';
     setTimeout(() => {
         revealInfo.style.opacity = '1';
         revealInfo.style.transform = 'translateY(0)';
-    }, 10); // Petit délai pour que le transition se déclenche correctement
+    }, 10); 
 }
 
-// Fonction pour masquer le texte du reveal
+
 function hideReveal(element) {
     const revealInfo = element.querySelector('.reveal-info');
     revealInfo.style.opacity = '0';
     revealInfo.style.transform = 'translateY(-20px)';
     setTimeout(() => {
         revealInfo.style.display = 'none';
-    }, 500); // Correspond au délai de l'animation pour cacher après l'animation
+    }, 500); 
 }
 
-// Ajouter des événements de survol pour chaque bloc
+
 efrei.addEventListener('mouseover', () => showReveal(efrei));
 efrei.addEventListener('mouseout', () => hideReveal(efrei));
 
