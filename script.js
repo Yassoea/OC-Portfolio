@@ -42,3 +42,38 @@ document.addEventListener("DOMContentLoaded", () => {
   typeText();
 });
 /*First Section*/
+
+/*Third Section*/
+// Sélectionner les éléments
+const efrei = document.querySelector('.efrei');
+const oc = document.querySelector('.oc');
+
+// Fonction pour afficher le texte du reveal
+function showReveal(element) {
+    const revealInfo = element.querySelector('.reveal-info');
+    revealInfo.style.display = 'block';
+    setTimeout(() => {
+        revealInfo.style.opacity = '1';
+        revealInfo.style.transform = 'translateY(0)';
+    }, 10); // Petit délai pour que le transition se déclenche correctement
+}
+
+// Fonction pour masquer le texte du reveal
+function hideReveal(element) {
+    const revealInfo = element.querySelector('.reveal-info');
+    revealInfo.style.opacity = '0';
+    revealInfo.style.transform = 'translateY(-20px)';
+    setTimeout(() => {
+        revealInfo.style.display = 'none';
+    }, 500); // Correspond au délai de l'animation pour cacher après l'animation
+}
+
+// Ajouter des événements de survol pour chaque bloc
+efrei.addEventListener('mouseover', () => showReveal(efrei));
+efrei.addEventListener('mouseout', () => hideReveal(efrei));
+
+oc.addEventListener('mouseover', () => showReveal(oc));
+oc.addEventListener('mouseout', () => hideReveal(oc));
+
+
+/*Third Section*/

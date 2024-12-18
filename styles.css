@@ -205,10 +205,10 @@ h2{
 }
 
 .school-logo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 100%; /* L'image occupe toute la taille du cercle */
+    height: 100%; /* L'image occupe toute la taille du cercle */
+    border-radius: 50%; /* Assurez-vous que l'image est circulaire */
+     
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -218,32 +218,39 @@ h2{
 }
 
 .reveal-info {
-    display: none;
+    display: none; 
     background: var(--second-bg-color);
     padding: 20px;
     color: white;
     text-align: center;
     position: absolute;
-    top: 120%;
+    top: 120%; 
     left: 0;
     right: 0;
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-20px); /* Initialement légèrement décalé vers le haut */
     transition: opacity 0.4s ease, transform 0.4s ease;
     border-radius: 10px;
 }
 
 .efrei, .oc {
     position: relative;
-    width: 250px;
-    height: 250px;
-    background-color: #333;
+    width: 230px;
+    height: 220px;
+    background-color: white;
     text-align: center;
     border-radius: 50%;
     margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.efrei:hover .reveal-info,
+.oc:hover .reveal-info {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* L'élément glisse du haut vers le bas */
 }
 
 h4 {
