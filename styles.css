@@ -791,3 +791,28 @@ h4 {
   }
   
 /*Sixth Section*/
+
+
+ /*---------RESPONSIVE---------------*/
+ @media (max-width: 1024px){
+   .sticky{
+        
+    }
+    .title{
+      font-size: 6rem;
+    }
+    .title2{
+        font-size: 6rem;
+    }
+    .title3{
+        font-size: 5rem;
+    }
+ }
+ @media (max-width: 1440px){
+    .title2{
+        padding-bottom: 18%;
+    }
+ }
+ @media (max-width: 768px){
+    
+ }

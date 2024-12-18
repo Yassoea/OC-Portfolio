@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
-    // Fonction pour gérer le filtrage
+    
     function filterProjects(filter) {
         projectCards.forEach(card => {
             const categories = card.getAttribute('data-category').split(' ');
@@ -117,21 +117,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Gestion des clics sur les boutons
+    
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Retirer la classe active de tous les boutons
+           
             filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Ajouter la classe active au bouton cliqué
+            
             button.classList.add('active');
 
-            // Récupérer le filtre et filtrer les projets
+            
             const filter = button.getAttribute('data-filter');
             filterProjects(filter);
         });
     });
 
-    // Activer le filtre "Tous" par défaut
+    
     filterButtons[0].click();
 });
 /*Fifth Section*/
@@ -157,3 +157,17 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 /*Sixth Section*/
+
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+   
+    setTimeout(function () {
+      document.getElementById('successMessage').style.display = 'block';
+      
+      setTimeout(function () {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 5000);
+    }, 1000);
+  });

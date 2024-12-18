@@ -169,78 +169,83 @@
     <section id="Contact">
         <h2>Contact</h2>
         <div class="container">
-            
-            <div class="form">
-              <div class="contact-info">
-                <h9 class="title4">Let's get in touch</h9>
-                <p class="text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                  dolorum adipisci recusandae praesentium dicta!
-                </p>
+          <div class="form">
+            <div class="contact-info">
+              <h9 class="title4">Let's get in touch</h9>
+              <p class="text">
+                Nous sommes à votre écoute ! Envoyez-nous un message et nous vous répondrons rapidement.
+              </p>
       
-                <div class="info">
-                  <div class="information">
-                    <img src="images/logos/location.png" class="icon" alt="" />
-                    <p>Rabat - Morocco</p>
-                  </div>
-                  <div class="information">
-                    <img src="images/logos/email.png" class="icon" alt="" />
-                    <p>elakhalyassine10@gmail.com</p>
-                  </div>
-                  <div class="information">
-                    <img src="images/logos/phone.png" class="icon" alt="" />
-                    <p>+212 649-606932</p>
-                  </div>
+              <div class="info">
+                <div class="information">
+                  <img src="images/logos/location.png" class="icon" alt="" />
+                  <p>Rabat - Morocco</p>
                 </div>
-      
-                <div class="social-media">
-                  <p>Connect with us :</p>
-                  <div class="social-icons">
-                    <a href="https://wa.me/+212649606932?text=Hey%20,%20I%20am%20interested%20by%20your%20Portfolio%20!">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="tel:+212649606932">
-                        <i class="fa-solid fa-phone"></i>
-                    </a>
-                    <a href="https://github.com/Yassoea">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                  </div>
+                <div class="information">
+                  <img src="images/logos/email.png" class="icon" alt="" />
+                  <p>elakhalyassine10@gmail.com</p>
+                </div>
+                <div class="information">
+                  <img src="images/logos/phone.png" class="icon" alt="" />
+                  <p>+212 649-606932</p>
                 </div>
               </div>
       
-              <div class="contact-form">
-                <span class="circle one"></span>
-                <span class="circle two"></span>
+              <div class="social-media">
+                <p>Connect with us :</p>
+                <div class="social-icons">
+                  <a href="https://wa.me/+212649606932?text=Hey%20,%20I%20am%20interested%20by%20your%20Portfolio%20!">
+                      <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+212649606932">
+                      <i class="fa-solid fa-phone"></i>
+                  </a>
+                  <a href="https://github.com/Yassoea">
+                      <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
       
-                <form action="index.html" autocomplete="off">
-                  <h3 class="title">Contact us</h3>
-                  <div class="input-container">
-                    <input type="text" name="name" class="input" />
-                    <label for="">Username</label>
-                    <span>Username</span>
-                  </div>
-                  <div class="input-container">
-                    <input type="email" name="email" class="input" />
-                    <label for="">Email</label>
-                    <span>Email</span>
-                  </div>
-                  <div class="input-container">
-                    <input type="tel" name="phone" class="input" />
-                    <label for="">Phone</label>
-                    <span>Phone</span>
-                  </div>
-                  <div class="input-container textarea">
-                    <textarea name="message" class="input"></textarea>
-                    <label for="">Message</label>
-                    <span>Message</span>
-                  </div>
-                  <input type="submit" value="Send" class="btn" />
-                </form>
+            <div class="contact-form">
+              <span class="circle one"></span>
+              <span class="circle two"></span>
+      
+              
+              <form action="https://formsubmit.co/elakhalyassine10@gmail.com" method="POST" id="contactForm" autocomplete="off">
+                <h3 class="title">Contact us</h3>
+                <div class="input-container">
+                  <input type="text" name="name" class="input" required />
+                  <label for="">Username</label>
+                  <span>Username</span>
+                </div>
+                <div class="input-container">
+                  <input type="email" name="email" class="input" required />
+                  <label for="">Email</label>
+                  <span>Email</span>
+                </div>
+                <div class="input-container">
+                  <input type="tel" name="phone" class="input" />
+                  <label for="">Phone</label>
+                  <span>Phone</span>
+                </div>
+                <div class="input-container textarea">
+                  <textarea name="message" class="input" required></textarea>
+                  <label for="">Message</label>
+                  <span>Message</span>
+                </div>
+                <input type="submit" value="Send" class="btn" />
+              </form>
+      
+             
+              <div id="successMessage" style="display: none; text-align: center; color: green; font-size: 16px; margin-top: 20px;">
+                <i class="fa-solid fa-check-circle"></i> The message is sent!
               </div>
             </div>
           </div>
-    </section>
+        </div>
+      </section>
+      
     <script src="script.js"></script>
 </body>
 </html>
