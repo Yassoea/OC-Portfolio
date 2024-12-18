@@ -205,7 +205,7 @@ h2{
 #Education {
     text-align: center;
     margin-top: 50px;
-    padding-bottom: 20%;
+    
 }
 
 .education-content {
@@ -265,6 +265,7 @@ h2{
 
 h4 {
     font-size: 2rem;
+
 }
 .title2 {
     font-size: 7rem;
@@ -273,9 +274,157 @@ h4 {
     top: 210%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 5;
     white-space: nowrap;
     font-weight: 900;
     letter-spacing: 10px;
 }
 /* Third Section */
+
+
+/* Fourth Section */
+#Compétences {
+    padding: 50px 0;
+    background-color: var(--bg-color);
+    text-align: center;
+    margin-top: 20%;
+}
+
+#Compétences h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.competences-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.competences-card {
+    background-color: var(--second-bg-color);
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competences-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 22px var(--secondly-color);
+}
+
+.competences-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.competences-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+.title3 {
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.1); 
+    position: absolute;
+    top: 298%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    white-space: nowrap;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+#Compétences h4{
+    margin-bottom: 10%;
+}
+
+/* Fourth Section */
+
+/*Fifth section*/
+#portfolio {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.filters {
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #ccc;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/*Fifth section*/

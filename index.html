@@ -27,12 +27,12 @@
     
     <section id="header">
         <header class="header">
-            <a href="#Accueil" class="logo"><img src="images/yea logo.png" alt="Logo"></a>
+            <a href="#Accueil" class="logo"><img src="images/logos/yea logo.png" alt="Logo"></a>
             <nav class="navbar">
                 <a href="#Accueil" class="active">Accueil</a>
                 <a href="#Education">Education</a>
                 <a href="#Compétences">Compétences</a>
-                <a href="#Projets">Projets</a>
+                <a href="#portfolio">Projets</a>
                 <a href="#Contact">Contact</a>
             </nav>
         </header>
@@ -60,7 +60,7 @@
         <h6 class="title2">Où ai-je étudié ?</h6>
         <div class="education-content">
             <div class="efrei">
-                <img src="images/efrei logo.jpg" alt="Logo d'Efrei" class="school-logo">
+                <img src="images/logos/efrei logo.jpg" alt="Logo d'Efrei" class="school-logo">
                 <div class="reveal-info">
                     <h5>Efrei Bordeaux</h5>
                     <p>J'ai complété ma première année de Bachelor en Développement Web et Applications à l'EFREI Bordeaux.</p>
@@ -68,7 +68,7 @@
             </div>
     
             <div class="oc">
-                <img src="images/oc logo.png" alt="Logo d'OpenClassroom" class="school-logo">
+                <img src="images/logos/oc logo.png" alt="Logo d'OpenClassroom" class="school-logo">
                 <div class="reveal-info">
                     <h5>OpenClassroom - Formation à distance</h5>
                     <p>Je poursuis actuellement mes études en développement web dans le cadre d'une formation à distance avec OpenClassrooms.</p>
@@ -78,10 +78,77 @@
     </section>
     
     
+    <section id="Compétences">
+        <h4>Mes compétences</h4>
+        <h8 class="title3">Que sais-je faire ?</h8>
+        <div class="competences-cards">
+            <div class="competences-card">
+                <h3>Développement Front-End</h3>
+                <p>Capacité à créer des interfaces interactives et responsives pour une expérience optimale sur tous les appareils.</p>
+            </div>
+            <div class="competences-card">
+                <h3>Développement Back-End</h3>
+                <p>Compétences en Node.js et Express pour créer des API sécurisées et performantes.</p>
+            </div>
+            <div class="competences-card">
+                <h3>Optimisation des Performances</h3>
+                <p>Capacité à optimiser le code et les ressources pour améliorer la vitesse de chargement et la réactivité des applications.</p>
+            </div>
+            <div class="competences-card">
+                <h3>Accompagnement</h3>
+                <p>Gestion complète des projets avec une communication constante pour garantir la satisfaction du client.</p>
+            </div>
+            <div class="competences-card">
+                <h3>Référencement Naturel (SEO)</h3>
+                <p>Connaissances en SEO pour optimiser la visibilité des sites web sur les moteurs de recherche.</p>
+            </div>
+        </div>
+    </section>
     
     
-    
-    
+    <section id="portfolio">
+        <h2>Mes Réalisations</h2>
+        <div class="filters">
+            <button class="filter-btn" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="wordpress">WordPress</button>
+            <button class="filter-btn" data-filter="symfony">Symfony</button>
+            <button class="filter-btn" data-filter="java">Java</button>
+            <button class="filter-btn" data-filter="prestashop">Prestashop</button>
+        </div>
+        <div class="projects">
+            <div class="project-card" data-category="wordpress">
+                <img src="images/project1.jpg" alt="City 4 Trip">
+                <h3>City 4 Trip - eCommerce</h3>
+                <p>Une plateforme collaborative pour la réservation d'activités.</p>
+                <a href="https://www.city4trip.fr" target="_blank">Visiter le site</a>
+            </div>
+            <div class="project-card" data-category="wordpress">
+                <img src="images/project2.jpg" alt="My Coach Box">
+                <h3>My Coach Box - eCommerce</h3>
+                <p>Un site pour aider à la reconversion professionnelle avec des cours en ligne.</p>
+                <a href="https://www.mycoachbox.fr" target="_blank">Visiter le site</a>
+            </div>
+            <div class="project-card" data-category="prestashop">
+                <img src="images/project3.jpg" alt="Dps Market">
+                <h3>Dps Market - eCommerce</h3>
+                <p>Une boutique en ligne pour la présentation de produits alimentaires.</p>
+                <a href="https://www.dpsmarket.com" target="_blank">Visiter le site</a>
+            </div>
+            <div class="project-card" data-category="symfony">
+                <img src="images/project4.jpg" alt="Gsb Frais">
+                <h3>Gsb Frais - Gestion de frais</h3>
+                <p>Application de gestion des fiches de frais pour les commerciaux.</p>
+                <a href="https://www.gsbfrais.fr" target="_blank">Visiter le site</a>
+            </div>
+            <div class="project-card" data-category="java">
+                <img src="images/project5.jpg" alt="Urban Marginal">
+                <h3>Urban Marginal - Jeu 2D</h3>
+                <p>Jeu de combat en 2D développé en Java.</p>
+                <a href="https://www.urbanmarginal.com" target="_blank">Visiter le site</a>
+            </div>
+            <!-- Ajoutez d'autres projets ici -->
+        </div>
+    </section>
 
 
     <script src="script.js"></script>

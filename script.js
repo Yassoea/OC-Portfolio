@@ -97,3 +97,32 @@ oc.addEventListener('mouseout', () => hideReveal(oc));
 
 
 /*Third Section*/
+
+
+/*Fifth Section*/
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.classList.add('show');
+                } else {
+                    card.classList.remove('show');
+                }
+            });
+        });
+    });
+
+    // Initial display
+    filterButtons[0].click();
+});
+
+/*Fifth Section*/
