@@ -98,31 +98,62 @@ oc.addEventListener('mouseout', () => hideReveal(oc));
 
 /*Third Section*/
 
-
 /*Fifth Section*/
 document.addEventListener('DOMContentLoaded', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
+    // Fonction pour gérer le filtrage
+    function filterProjects(filter) {
+        projectCards.forEach(card => {
+            const categories = card.getAttribute('data-category').split(' ');
+            if (filter === 'tous' || categories.includes(filter)) {
+                card.classList.add('show');
+                card.classList.remove('hide');
+            } else {
+                card.classList.remove('show');
+                card.classList.add('hide');
+            }
+        });
+    }
+
+    // Gestion des clics sur les boutons
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const filter = button.getAttribute('data-filter');
-
+            // Retirer la classe active de tous les boutons
             filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Ajouter la classe active au bouton cliqué
             button.classList.add('active');
 
-            projectCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.classList.add('show');
-                } else {
-                    card.classList.remove('show');
-                }
-            });
+            // Récupérer le filtre et filtrer les projets
+            const filter = button.getAttribute('data-filter');
+            filterProjects(filter);
         });
     });
 
-    // Initial display
+    // Activer le filtre "Tous" par défaut
     filterButtons[0].click();
 });
-
 /*Fifth Section*/
+
+/*Sixth Section*/
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+/*Sixth Section*/

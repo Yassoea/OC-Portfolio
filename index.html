@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Yassin's Portfolio</title>
@@ -15,12 +16,12 @@
 
     
     <section id="Accueil">
-        <div class="container">
+        <div class="Accueil-container">
             <div class="code-animation">
                 <span id="text"></span>
                 <span class="cursor">|</span>
             </div>
-            <a href="#header" class="btn">En savoir plus</a>
+            <a href="#header" class="more">En savoir plus</a>
         </div>
     </section>
     
@@ -83,74 +84,163 @@
         <h8 class="title3">Que sais-je faire ?</h8>
         <div class="competences-cards">
             <div class="competences-card">
-                <h3>Développement Front-End</h3>
+                <h3><i class="fas fa-laptop-code"></i> Développement Front-End</h3>
                 <p>Capacité à créer des interfaces interactives et responsives pour une expérience optimale sur tous les appareils.</p>
             </div>
             <div class="competences-card">
-                <h3>Développement Back-End</h3>
+                <h3><i class="fas fa-server"></i> Développement Back-End</h3>
                 <p>Compétences en Node.js et Express pour créer des API sécurisées et performantes.</p>
             </div>
             <div class="competences-card">
-                <h3>Optimisation des Performances</h3>
+                <h3><i class="fas fa-tachometer-alt"></i> Optimisation des Performances</h3>
                 <p>Capacité à optimiser le code et les ressources pour améliorer la vitesse de chargement et la réactivité des applications.</p>
             </div>
             <div class="competences-card">
-                <h3>Accompagnement</h3>
+                <h3><i class="fas fa-users"></i> Accompagnement</h3>
                 <p>Gestion complète des projets avec une communication constante pour garantir la satisfaction du client.</p>
             </div>
             <div class="competences-card">
-                <h3>Référencement Naturel (SEO)</h3>
+                <h3><i class="fas fa-search"></i> Référencement Naturel (SEO)</h3>
                 <p>Connaissances en SEO pour optimiser la visibilité des sites web sur les moteurs de recherche.</p>
             </div>
         </div>
     </section>
     
     
+    
     <section id="portfolio">
         <h2>Mes Réalisations</h2>
         <div class="filters">
-            <button class="filter-btn" data-filter="all">Tous</button>
-            <button class="filter-btn" data-filter="wordpress">WordPress</button>
-            <button class="filter-btn" data-filter="symfony">Symfony</button>
-            <button class="filter-btn" data-filter="java">Java</button>
-            <button class="filter-btn" data-filter="prestashop">Prestashop</button>
+            <button class="filter-btn" data-filter="tous">Tous</button>
+            <button class="filter-btn" data-filter="htmlcss">Html & CSS</button>
+            <button class="filter-btn" data-filter="js">JavaScript</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="backend">Backend</button>
+            <button class="filter-btn" data-filter="optimisation">Optimisation et Débuggage</button>
+            <button class="filter-btn" data-filter="planif">Gestion et Planification</button>
         </div>
         <div class="projects">
-            <div class="project-card" data-category="wordpress">
-                <img src="images/project1.jpg" alt="City 4 Trip">
-                <h3>City 4 Trip - eCommerce</h3>
-                <p>Une plateforme collaborative pour la réservation d'activités.</p>
-                <a href="https://www.city4trip.fr" target="_blank">Visiter le site</a>
+            <div class="project-card" data-category="htmlcss tous">
+                <img src="images/projects/booki.png" alt="Booki">
+                <h3>Booki</h3>
+                <p>Intégration d'une maquette HTML/CSS pour une plateforme de réservation d'hébergements, avec un design responsive.</p>
+                <a href="https://github.com/Yassoea/OC-Booki" target="_blank">Visiter le site</a>
             </div>
-            <div class="project-card" data-category="wordpress">
-                <img src="images/project2.jpg" alt="My Coach Box">
-                <h3>My Coach Box - eCommerce</h3>
-                <p>Un site pour aider à la reconversion professionnelle avec des cours en ligne.</p>
-                <a href="https://www.mycoachbox.fr" target="_blank">Visiter le site</a>
+            <div class="project-card" data-category="js htmlcss tous">
+                <img src="images/projects/sophie bluel.png" alt="Portfolio Sophie Bluel">
+                <h3>Portfolio Sophie Bluel</h3>
+                <p>Dynamisation d'un portfolio avec JavaScript, ajout de filtres et galerie interactive.</p>
+                <a href="https://yassoea.github.io/Sophie-Bluel-Portfolio/" target="_blank">Visiter le site</a>
             </div>
-            <div class="project-card" data-category="prestashop">
-                <img src="images/project3.jpg" alt="Dps Market">
-                <h3>Dps Market - eCommerce</h3>
-                <p>Une boutique en ligne pour la présentation de produits alimentaires.</p>
-                <a href="https://www.dpsmarket.com" target="_blank">Visiter le site</a>
+            <div class="project-card" data-category="optimisation tous">
+                <img src="images/projects/nina.webp" alt="Optimisation du site Nina Carducci">
+                <h3>Optimisation du site Nina Carducci</h3>
+                <p>Amélioration des performances et du SEO du site d'une photographe.</p>
+                <a href="https://yassoea.github.io/Nina-Carducci-Portfolio/" target="_blank">Visiter le site</a>
             </div>
-            <div class="project-card" data-category="symfony">
-                <img src="images/project4.jpg" alt="Gsb Frais">
-                <h3>Gsb Frais - Gestion de frais</h3>
-                <p>Application de gestion des fiches de frais pour les commerciaux.</p>
-                <a href="https://www.gsbfrais.fr" target="_blank">Visiter le site</a>
+            <div class="project-card" data-category="react tous">
+                <img src="images/projects/kasa.png" alt="Kasa">
+                <h3>Kasa</h3>
+                <p>Création d'une plateforme de location immobilière avec React et React Router.</p>
+                <a href="https://github.com/Yassoea/kasa-project" target="_blank">Visiter le site</a>
             </div>
-            <div class="project-card" data-category="java">
-                <img src="images/project5.jpg" alt="Urban Marginal">
-                <h3>Urban Marginal - Jeu 2D</h3>
-                <p>Jeu de combat en 2D développé en Java.</p>
-                <a href="https://www.urbanmarginal.com" target="_blank">Visiter le site</a>
+            <div class="project-card" data-category="backend tous">
+                <img src="images/projects/mon vieux grimoire.webp" alt="Mon Vieux Grimoire">
+                <h3>Mon Vieux Grimoire</h3>
+                <p>Développement d'une API avec Node.js pour gérer des livres et utilisateurs.</p>
+                <a href="https://github.com/Yassoea/mon-vieux-grimoire" target="_blank">Visiter le site</a>
             </div>
-            <!-- Ajoutez d'autres projets ici -->
+            <div class="project-card" data-category="planif tous">
+                <img src="images/projects/qwenta.png" alt="Qwenta Menu Maker">
+                <h3>Qwenta Menu Maker </h3>
+                <p>Planification du développement du site pour un client</p>
+                <a href="https://github.com/Yassoea?tab=repositories" target="_blank">Visiter le site</a>
+            </div>
+            <div class="project-card" data-category="htmlcss js tous">
+                <img src="images/projects/Portfolio.png" alt="Portfolio">
+                <h3>Portfolio </h3>
+                <p>Conception de mon portfolio personnel avec un design responsive et optimisé pour le SEO.</p>
+                <a href="https://yassoea.github.io/OC-Portfolio/" target="_blank">Visiter le site</a>
+            </div>
         </div>
     </section>
 
 
+    <section id="Contact">
+        <h2>Contact</h2>
+        <div class="container">
+            
+            <div class="form">
+              <div class="contact-info">
+                <h9 class="title4">Let's get in touch</h9>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  dolorum adipisci recusandae praesentium dicta!
+                </p>
+      
+                <div class="info">
+                  <div class="information">
+                    <img src="images/logos/location.png" class="icon" alt="" />
+                    <p>Rabat - Morocco</p>
+                  </div>
+                  <div class="information">
+                    <img src="images/logos/email.png" class="icon" alt="" />
+                    <p>elakhalyassine10@gmail.com</p>
+                  </div>
+                  <div class="information">
+                    <img src="images/logos/phone.png" class="icon" alt="" />
+                    <p>+212 649-606932</p>
+                  </div>
+                </div>
+      
+                <div class="social-media">
+                  <p>Connect with us :</p>
+                  <div class="social-icons">
+                    <a href="https://wa.me/+212649606932?text=Hey%20,%20I%20am%20interested%20by%20your%20Portfolio%20!">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="tel:+212649606932">
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    <a href="https://github.com/Yassoea">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+      
+                <form action="index.html" autocomplete="off">
+                  <h3 class="title">Contact us</h3>
+                  <div class="input-container">
+                    <input type="text" name="name" class="input" />
+                    <label for="">Username</label>
+                    <span>Username</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="email" name="email" class="input" />
+                    <label for="">Email</label>
+                    <span>Email</span>
+                  </div>
+                  <div class="input-container">
+                    <input type="tel" name="phone" class="input" />
+                    <label for="">Phone</label>
+                    <span>Phone</span>
+                  </div>
+                  <div class="input-container textarea">
+                    <textarea name="message" class="input"></textarea>
+                    <label for="">Message</label>
+                    <span>Message</span>
+                  </div>
+                  <input type="submit" value="Send" class="btn" />
+                </form>
+              </div>
+            </div>
+          </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
