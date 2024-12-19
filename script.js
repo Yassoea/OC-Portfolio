@@ -68,16 +68,14 @@ window.addEventListener('scroll', () => {
 const efrei = document.querySelector('.efrei');
 const oc = document.querySelector('.oc');
 
-
 function showReveal(element) {
     const revealInfo = element.querySelector('.reveal-info');
     revealInfo.style.display = 'block';
     setTimeout(() => {
         revealInfo.style.opacity = '1';
         revealInfo.style.transform = 'translateY(0)';
-    }, 10); 
+    }, 10);
 }
-
 
 function hideReveal(element) {
     const revealInfo = element.querySelector('.reveal-info');
@@ -85,15 +83,37 @@ function hideReveal(element) {
     revealInfo.style.transform = 'translateY(-20px)';
     setTimeout(() => {
         revealInfo.style.display = 'none';
-    }, 500); 
+    }, 500);
 }
 
+function handleWindowResize() {
+    const width = window.innerWidth;
 
+    if (width <= 508) {
+        // Make sure the animation is disabled, and simply show the logos and paragraphs
+        efrei.classList.add('visible');
+        oc.classList.add('visible');
+        // Ensure reveal-info is shown directly in mobile view
+        efrei.querySelector('.reveal-info').style.display = 'block';
+        oc.querySelector('.reveal-info').style.display = 'block';
+    } else {
+        efrei.classList.remove('visible');
+        oc.classList.remove('visible');
+    }
+}
+
+// Add event listeners for mouseover and mouseout to reveal hidden content (only for larger screens)
 efrei.addEventListener('mouseover', () => showReveal(efrei));
 efrei.addEventListener('mouseout', () => hideReveal(efrei));
 
 oc.addEventListener('mouseover', () => showReveal(oc));
 oc.addEventListener('mouseout', () => hideReveal(oc));
+
+// Initial check on page load
+handleWindowResize();
+
+// Add event listener to handle window resizing
+window.addEventListener('resize', handleWindowResize);
 
 
 /*Third Section*/

@@ -119,6 +119,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 10;
+    background-color: var(--second-bg-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
 }
 .logo img{
@@ -205,7 +206,7 @@ h2{
 #Education {
     text-align: center;
     margin-top: 50px;
-    
+    height: 100vh;
 }
 
 .education-content {
@@ -284,10 +285,11 @@ h4 {
 
 /* Fourth Section */
 #Compétences {
-    padding: 50px 0 20%;
+   
     background-color: var(--bg-color);
     text-align: center;
     margin-top: 20%;
+    height: 100vh;
 
 }
 
@@ -795,9 +797,6 @@ h4 {
 
  /*---------RESPONSIVE---------------*/
  @media (max-width: 1024px){
-   .sticky{
-        
-    }
     .title{
       font-size: 6rem;
     }
@@ -806,6 +805,28 @@ h4 {
     }
     .title3{
         font-size: 5rem;
+        padding-top: 30%;
+    }
+ }
+ @media (max-width: 2560px){
+    .title3{
+        font-size: 3.5rem;
+        padding-top: 34%;
+    }
+    .title2{
+        padding-bottom: 24%;
+    }
+ }
+ @media (max-width: 1194px){
+    .title{
+      font-size: 4rem;
+    }
+    .title2{
+        font-size: 3.8rem;
+    }
+    .title3{
+        font-size: 3.5rem;
+        padding-top: 30%;
     }
  }
  @media (max-width: 1440px){
@@ -814,5 +835,153 @@ h4 {
     }
  }
  @media (max-width: 768px){
-    
+    .title2{
+        font-size: 3.8rem;
+        padding-bottom: 30%;
+    }
+    .title3{
+        font-size: 3.5rem;
+        padding-bottom: 15%;
+
+    }
+    .logo{
+        display: none;
+    }
+    .header{
+        display: flex;
+        justify-content: center;
+        padding-left: 20%;
+    }
+    .sticky{
+        display: flex;
+        justify-content: center;
+        padding-left: 20%;
+        background-color: var(--second-bg-color);
+    }
+    #Compétences{
+        height: 150vh;
+    }
  }
+ @media (max-width: 699px){
+        
+        .navbar a{
+            font-size: 1rem;
+        }
+        .title3{
+            font-size: 3rem;
+            padding-bottom: 25%;
+        }
+        .title2{
+            font-size: 3rem;
+            padding-bottom: 25%;
+        }
+        .title{
+            font-size: 3rem;
+            padding-bottom: 15%;
+        }
+ }
+ @media (max-width: 640px){
+        
+    .navbar a{
+        font-size: 1rem;
+    }
+    .title3{
+        font-size: 2rem;
+        padding-bottom: 80%;
+    }
+    .title2{
+        font-size: 2.5rem;
+        padding-bottom: 38%;
+    }
+    .title{
+        font-size: 2.5rem;
+        padding-bottom: 13%;
+    }
+    .efrei{
+        width: 30%;
+        height: 30%;
+    }
+    .oc{
+        width: 30%;
+        height: 30%;
+    }
+    .reveal-info{
+        width: 100%;
+        font-size: 0.5rem;
+    }
+    .efrei,
+    .oc{
+        width: 20%;
+    }
+}
+@media (max-width: 508px) {
+    .navbar a {
+        font-size: 0.6rem;
+    }
+    
+    .home-content p {
+        font-size: 0.8rem;
+    }
+
+    .title2 {
+        font-size: 0.5rem;
+        padding-bottom: 40%;
+    }
+    .title3 {
+        font-size: 1rem;
+        padding-top: 120%;
+        
+    }
+    .education-content {
+        display: flex;
+        align-items: center; /* Center items horizontally */
+        flex-direction: column;
+       
+        gap: 100px; /* Space between the logos */
+    }
+    #Compétences{
+        margin-bottom: 120%;
+    }
+    
+    
+    .reveal-info{
+        width: 120%;
+        font-size: 0.5rem;
+    }
+    .efrei,
+    .oc{
+        width: 20%;
+    }
+    .oc {
+        margin-top: 15%;
+    }
+
+}
+@media (max-width: 373px){
+    .title{
+        font-size: 0.8rem;
+        padding-bottom: 30%;
+    }
+    .title3{
+        font-size: 0.5rem;
+    }
+    .navbar a{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.45rem;
+        
+    }
+    .reveal-info{
+        width: 180%;
+        display: flex;
+        
+        font-size: 0.5rem;
+    }
+    .efrei,
+    .oc{
+        width: 20%;
+    }
+    .oc {
+        margin-top: 15%;
+    }
+}
