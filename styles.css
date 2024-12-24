@@ -112,7 +112,7 @@ header {
     align-items: center;
    
 }
-/* Classe sticky appliquée lorsque l'on fait défiler */
+
 .sticky {
     position: fixed;
     top: 0;
@@ -151,7 +151,10 @@ header {
     border-bottom:  3px solid var(--main-color);
 }
 
-
+.menu-toggle{
+  font-size: 30px;
+  display: none;
+}
 #home {
     position: relative;
     height: 80vh;
@@ -860,6 +863,13 @@ h4 {
     }
     #Compétences{
         height: 150vh;
+    }
+    .menu-toggle{
+      font-size: 30px;
+      display: block;
+    }
+    .navbar{
+      display: none;
     }
  }
  @media (max-width: 699px){
