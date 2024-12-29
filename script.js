@@ -64,7 +64,6 @@ window.addEventListener('scroll', () => {
 
 
 /*Third Section*/
-
 const efrei = document.querySelector('.efrei');
 const oc = document.querySelector('.oc');
 
@@ -80,29 +79,39 @@ function showReveal(element) {
 function hideReveal(element) {
     const revealInfo = element.querySelector('.reveal-info');
     revealInfo.style.opacity = '0';
-    revealInfo.style.transform = 'translateY(-20px)';
+    revealInfo.style.transform = 'translateY(-10px)';
     setTimeout(() => {
         revealInfo.style.display = 'none';
-    }, 500);
+    }, 300); // Reduced timeout for quicker animation
 }
 
 function handleWindowResize() {
     const width = window.innerWidth;
 
-    if (width <= 508) {
-        // Make sure the animation is disabled, and simply show the logos and paragraphs
+    if (width <= 780) {
+        // Disable animation and adjust layout for tablet view
         efrei.classList.add('visible');
         oc.classList.add('visible');
-        // Ensure reveal-info is shown directly in mobile view
+        
+        // Make reveal-info always visible in tablet view
         efrei.querySelector('.reveal-info').style.display = 'block';
+        efrei.querySelector('.reveal-info').style.opacity = '1';
+        efrei.querySelector('.reveal-info').style.transform = 'translateY(0)';
+
         oc.querySelector('.reveal-info').style.display = 'block';
+        oc.querySelector('.reveal-info').style.opacity = '1';
+        oc.querySelector('.reveal-info').style.transform = 'translateY(0)';
     } else {
         efrei.classList.remove('visible');
         oc.classList.remove('visible');
+        
+        // Reset reveal-info for desktop view
+        efrei.querySelector('.reveal-info').style.display = 'none';
+        oc.querySelector('.reveal-info').style.display = 'none';
     }
 }
 
-// Add event listeners for mouseover and mouseout to reveal hidden content (only for larger screens)
+// Add event listeners for mouseover and mouseout (desktop only)
 efrei.addEventListener('mouseover', () => showReveal(efrei));
 efrei.addEventListener('mouseout', () => hideReveal(efrei));
 

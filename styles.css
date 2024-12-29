@@ -209,7 +209,7 @@ h2{
 #Education {
     text-align: center;
     margin-top: 50px;
-    height: 100vh;
+    height: 110vh;
 }
 
 .education-content {
@@ -277,11 +277,15 @@ h4 {
     position: absolute;
     top: 210%;
     left: 50%;
+    height: 5%;
     transform: translate(-50%, -50%);
     z-index: 5;
     white-space: nowrap;
     font-weight: 900;
     letter-spacing: 10px;
+}
+h6{
+  height: 20%;
 }
 /* Third Section */
 
@@ -467,7 +471,7 @@ h4 {
     background-color: var(--secondly-color);
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    z-index: 5;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -837,6 +841,7 @@ h4 {
         padding-bottom: 18%;
     }
  }
+ 
  @media (max-width: 768px){
     .title2{
         font-size: 3.8rem;
@@ -848,17 +853,19 @@ h4 {
 
     }
     .logo{
-        display: none;
+        display: block;
+        height: 80%;
+        width: 80%;
     }
     .header{
         display: flex;
         justify-content: center;
         padding-left: 20%;
     }
+   
     .sticky{
         display: flex;
         justify-content: center;
-        padding-left: 20%;
         background-color: var(--second-bg-color);
     }
     #Compétences{
@@ -870,6 +877,9 @@ h4 {
     }
     .navbar{
       display: none;
+    }
+    .reveal-info{
+      display: block;
     }
  }
  @media (max-width: 699px){
@@ -888,6 +898,11 @@ h4 {
         .title{
             font-size: 3rem;
             padding-bottom: 15%;
+        }
+        .logo img{
+          margin-top: 2%;
+          height: 80%;
+          width: 22%;
         }
  }
  @media (max-width: 640px){
@@ -925,47 +940,60 @@ h4 {
     }
 }
 @media (max-width: 508px) {
-    .navbar a {
-        font-size: 0.6rem;
-    }
-    
-    .home-content p {
-        font-size: 0.8rem;
-    }
+  .navbar a {
+      font-size: 0.6rem;
+  }
 
-    .title2 {
-        font-size: 0.5rem;
-        padding-bottom: 40%;
-    }
-    .title3 {
-        font-size: 1rem;
-        padding-top: 120%;
-        
-    }
-    .education-content {
-        display: flex;
-        align-items: center; /* Center items horizontally */
-        flex-direction: column;
-       
-        gap: 100px; /* Space between the logos */
-    }
-    #Compétences{
-        margin-bottom: 120%;
-    }
-    
-    
-    .reveal-info{
-        width: 120%;
-        font-size: 0.5rem;
-    }
-    .efrei,
-    .oc{
-        width: 20%;
-    }
-    .oc {
-        margin-top: 15%;
-    }
+  .home-content p {
+      font-size: 0.8rem;
+  }
 
+  .title2 {
+      font-size: 0.5rem;
+      padding-bottom: 40%;
+  }
+
+  .title3 {
+      font-size: 1rem;
+      padding-top: 120%;
+  }
+
+  .education-content {
+      display: flex;
+      align-items: center; 
+      flex-direction: column;
+      gap: 100px; 
+  }
+
+  #Compétences {
+      margin-bottom: 120%;
+  }
+
+  .reveal-info {
+    text-align: center;
+    position: absolute;
+    opacity: 1;
+    margin-right: 10%;
+    border-radius: 10px;
+    font-size: 0.6rem;
+    line-height: 1.5; 
+    width: 200px; 
+    max-width: 300px; 
+  }
+  .logo img{
+    margin-top: 2%;
+    height: 80%;
+    width: 32%;
+  }
+
+  .efrei,
+  .oc {
+      width: 20%;
+  }
+
+  .oc {
+      margin-top: 15%;
+  }
 }
 @media (max-width: 373px){
     .title{
@@ -993,5 +1021,10 @@ h4 {
     }
     .oc {
         margin-top: 15%;
+    }
+    .logo img{
+      margin-top: 2%;
+      height: 80%;
+      width: 42%;
     }
 }
