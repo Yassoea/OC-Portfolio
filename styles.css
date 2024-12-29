@@ -131,11 +131,32 @@ header {
 .logo img:hover{
     transform: scale(1.1);
 }
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    margin-left: -20%;
-    
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -20%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* On mobile, make the navbar hidden */
+.navbar.show {
+  transform: translateX(0);
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
+.menu-toggle button {
+  display: none;
 }
 .navbar a {
     font-size: 1.3rem;
@@ -151,10 +172,6 @@ header {
     border-bottom:  3px solid var(--main-color);
 }
 
-.menu-toggle{
-  font-size: 30px;
-  display: none;
-}
 #home {
     position: relative;
     height: 80vh;
@@ -871,16 +888,44 @@ h6{
     #Compétences{
         height: 150vh;
     }
-    .menu-toggle{
-      font-size: 30px;
-      display: block;
-    }
-    .navbar{
-      display: none;
-    }
+    
     .reveal-info{
       display: block;
     }
+    .menu-toggle button {
+      display: inline-block;
+      cursor: pointer;
+  }
+  
+  .navbar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 110vh;
+      background-color: var(--bg-color);
+      flex-direction: column;
+      align-items: first baseline;
+      gap: 10px;
+      border-left: 1px solid var(--second-bg-color);
+      justify-content: center;
+      transition: right 300ms ease-in-out;
+      z-index: 10;
+  }
+
+  .navbar.show {
+      left: 70%;
+  }
+  #open-sidebar-button svg{
+    height: auto;
+    width: 45%;
+    
+    fill: white;
+  }
+
+  #close-sidebar-button {
+      display: inline-block;
+  }
  }
  @media (max-width: 699px){
         
